@@ -1,12 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coast T's Designs</title>
-  </head>
-  <body>
-    <h1>Coast T's Designs</h1>
-    <p>Coming soon.</p>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coast T's Designs | Custom Printing Whangaparāoa</title>
+    <meta name="description" content="Local custom printing in Stanmore Bay. T-shirts, hoodies, caps, and mugs with no minimum order. Eco-friendly and climate-conscious business.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Open Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+        
+        .view-section { display: none; }
+        .view-section.active { display: block; animation: fadeIn 0.5s ease-out; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .coastal-gradient {
+            background: linear-gradient(135deg, #0f766e 0%, #0d9488 100%);
+        }
+
+        .buy-button {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .buy-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center cursor-pointer" onclick="navigate('home')">
+                    <div class="bg-teal-600 text-white p-2 rounded-lg mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight text-teal-800">Coast T's <span class="text-slate-500">Designs</span></span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <button onclick="navigate('home')" class="hover:text-teal-600 font-semibold transition">Home</button>
+                    <button onclick="navigate('services')" class="hover:text-teal-600 font-semibold transition">Printing Services</button>
+                    <button onclick="navigate('eco')" class="hover:text-teal-600 font-semibold transition">Eco-Commitment</button>
+                    <a href="https://kerrzinga.nz/" class="buy-button bg-orange-600 text-white px-6 py-2 rounded-full font-bold hover:bg-orange-700 transition">BUY this site</a>
+                </div>
+                <!-- Mobile Trigger -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-btn" class="text-teal-800 text-2xl">☰</button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 p-4 space-y-4 shadow-xl">
+            <button onclick="navigate('home')" class="block w-full text-left font-semibold">Home</button>
+            <button onclick="navigate('services')" class="block w-full text-left font-semibold">Services</button>
+            <button onclick="navigate('eco')" class="block w-full text-left font-semibold">Eco-Commitment</button>
+            <a href="https://kerrzinga.nz/" class="block w-full text-center bg-orange-600 text-white py-3 rounded-lg font-bold">BUY this site</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Home View -->
+        <section id="home" class="view-section active">
+            <div class="relative bg-slate-900 h-[70vh] flex items-center overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1200&q=80" class="absolute inset-0 w-full h-full object-cover opacity-40" alt="T-shirt printing">
+                <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Your Idea, <br><span class="text-teal-400">Our Print.</span></h1>
+                    <p class="text-xl mb-8 max-w-xl text-slate-300">Personalised work, sports, and leisure wear in the Hibiscus Coast. High quality, zero stress, and NO minimum orders.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://kerrzinga.nz/" class="buy-button bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-bold text-lg shadow-lg transition text-center">BUY this site</a>
+                        <button onclick="navigate('services')" class="bg-white/10 backdrop-blur-md border border-white/30 hover:bg-white/20 text-white px-8 py-4 rounded-lg font-bold text-lg transition text-center">View Services</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 py-20">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                    <div>
+                        <div class="text-teal-600 text-4xl mb-4 flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">No Minimums</h3>
+                        <p class="text-slate-600">Need just one shirt for a gift or a birthday? We've got you covered. No job is too small.</p>
+                    </div>
+                    <div>
+                        <div class="text-teal-600 text-4xl mb-4 flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Locally Based</h3>
+                        <p class="text-slate-600">Operating right here in Stanmore Bay, Whangaparāoa. Support local business while getting top-tier results.</p>
+                    </div>
+                    <div>
+                        <div class="text-teal-600 text-4xl mb-4 flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Quality Finish</h3>
+                        <p class="text-slate-600">Vibrant, long-lasting prints on hoodies, caps, bags, and more using professional equipment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services View -->
+        <section id="services" class="view-section py-20">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-4">What We Print</h2>
+                <p class="text-center text-slate-600 mb-16 max-w-2xl mx-auto">From personal keepsakes to professional teamwear, we handle a wide range of customisation requests.</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80" alt="T-shirts" class="h-48 w-full object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-lg mb-2">T-Shirts & Polos</h3>
+                            <p class="text-slate-600 text-sm">Cotton or performance fabrics. Perfect for small businesses, events, or stag/hen nights.</p>
+                        </div>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition">
+                        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=600&q=80" alt="Hoodies" class="h-48 w-full object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-lg mb-2">Hoodies & Jumpers</h3>
+                            <p class="text-slate-600 text-sm">Stay warm with custom-printed leisurewear. High-quality prints that don't peel.</p>
+                        </div>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition">
+                        <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=600&q=80" alt="Caps" class="h-48 w-full object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-lg mb-2">Caps & Headwear</h3>
+                            <p class="text-slate-600 text-sm">Branded caps for your local club or sports team. No minimum orders required.</p>
+                        </div>
+                    </div>
+                    <!-- Service 4 -->
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition">
+                        <img src="https://images.unsplash.com/photo-1514516345957-556ca7d90a29?auto=format&fit=crop&w=600&q=80" alt="Mugs" class="h-48 w-full object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-lg mb-2">Mugs & Gifts</h3>
+                            <p class="text-slate-600 text-sm">Custom mugs and bags. The perfect personalised gift for birthdays or Christmas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16 text-center">
+                    <a href="https://kerrzinga.nz/" class="buy-button inline-block bg-orange-600 text-white font-bold py-4 px-12 rounded-lg text-xl">BUY this site</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eco View -->
+        <section id="eco" class="view-section py-20 bg-teal-900 text-white">
+            <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-teal-400 font-bold tracking-widest uppercase text-sm">The Green Scheme</span>
+                    <h2 class="text-4xl font-bold mt-2 mb-6">Climate Conscious Printing</h2>
+                    <p class="text-lg text-teal-100 mb-8 leading-relaxed">
+                        We are proud participants in the "Green Scheme" via Hibiscus Coast Zero Waste. As a small, home-based business in Stanmore Bay, we take specific steps to minimize our footprint:
+                    </p>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center gap-3">
+                            <span class="text-teal-400">🌿</span>
+                            <span>Significantly reduced single-use items in our workflow.</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-teal-400">⚡</span>
+                            <span>Measured and reduced power consumption for a smaller footprint.</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-teal-400">♻️</span>
+                            <span>Strict recycling and responsible paper usage practices.</span>
+                        </li>
+                    </ul>
+                    <a href="https://kerrzinga.nz/" class="buy-button bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg shadow-lg transition text-center inline-block">BUY this site</a>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-2xl rotate-3">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" alt="Eco Friendly">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Placeholder -->
+        <section id="contact" class="view-section py-20">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                 <h2 class="text-4xl font-bold mb-6">Interested in this website?</h2>
+                 <p class="text-xl text-slate-600 mb-10">This premium website for Coast T's Designs is ready for ownership.</p>
+                 <a href="https://kerrzinga.nz/" class="buy-button bg-orange-600 text-white px-12 py-5 rounded-xl font-bold text-2xl shadow-2xl transition inline-block">BUY this site NOW</a>
+                 
+                 <div class="mt-16 text-slate-400 border-t pt-8">
+                     <p>For existing business inquiries: 021 253 0880</p>
+                 </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="mb-4">© 2025 Coast T's Designs. Proudly based in Stanmore Bay, Hibiscus Coast.</p>
+            <div class="flex justify-center space-x-6 text-sm mb-6">
+                <button onclick="navigate('home')" class="hover:text-white">Home</button>
+                <button onclick="navigate('services')" class="hover:text-white">Services</button>
+                <button onclick="navigate('eco')" class="hover:text-white">Eco Policy</button>
+            </div>
+            <a href="https://kerrzinga.nz/" class="text-orange-500 font-bold hover:underline">OWN THIS WEBSITE</a>
+        </div>
+    </footer>
+
+    <script>
+        function navigate(viewId) {
+            // Hide all sections
+            document.querySelectorAll('.view-section').forEach(s => s.classList.remove('active'));
+            // Show target
+            document.getElementById(viewId).classList.add('active');
+            // Hide mobile menu
+            document.getElementById('mobile-menu').classList.add('hidden');
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        document.getElementById('mobile-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
 </html>
